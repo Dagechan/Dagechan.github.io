@@ -18,4 +18,5 @@ showActions:    false
 
 
 初投稿です！！
+こんにちは！！
 
