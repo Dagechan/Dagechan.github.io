@@ -3,7 +3,7 @@ publishDir = "docs"
 languageCode = 'ja'
 defaultContentLanguage = 'ja'
 title = 'My New Hugo Site'
-theme = 'hugo-tranquilpeak-theme'
+theme = 'tranquilpeak'
 
 [author]
   name = "Dagechan"
