@@ -1,6 +1,6 @@
 ---
-title: "初投稿"
-date: 2023-05-14T18:58:04+09:00
+title: "Test"
+date: 2023-05-16T09:58:54+09:00
 categories:
 - 日記
 - subcategory
@@ -13,9 +13,5 @@ comments:       false
 showMeta:       true
 showActions:    false
 #thumbnailImage: //example.com/image.jpg
-#hugo new page/title.md で作れる
 ---
-
-
-初投稿です！！
 
