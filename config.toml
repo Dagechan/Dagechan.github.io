@@ -1,4 +1,4 @@
-baseURL = 'http://Dagechan.github.io/'
+baseURL = 'https://Dagechan.github.io/'
 publishDir = "docs"
 languageCode = 'ja'
 defaultContentLanguage = 'ja'
