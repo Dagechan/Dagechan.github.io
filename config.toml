@@ -54,4 +54,4 @@ theme = 'tranquilpeak'
   identifier = "github"
   name = "GitHub"
   pre = "<i class=\"sidebar-button-icon fab fa-lg fa-github\" aria-hidden=\"true\"></i>"
-  url = ""
+  url = "https://github.com/Dagechan"
