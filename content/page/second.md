@@ -45,7 +45,7 @@ $ sudo snap install nvim --classic --stable
 ```
 classicオプションは，classic confinementを意味しており，これがないとNeovimがsnapでインストール出来ませんでした（詳しいことは今のところまだ理解していない）．stableオプションは安定版をインストールするためのオプションです．
 
-{{< figure src="/images/ubuntu-nvim2.png" title="snap installで得たneovim" class="center" >}}
+{{< figure src="/images/ubuntu-nvim2-1.png" title="snap installで得たneovim" class="center" >}}
 
 ちゃんとV0.9.0になっています．やったぜ．
 
