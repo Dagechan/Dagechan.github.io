@@ -4,6 +4,7 @@ languageCode = 'ja'
 defaultContentLanguage = 'ja'
 title = 'Dagechanの部屋'
 theme = 'tranquilpeak'
+pygmentsCodeFences = true
 
 [author]
   name = "Dagechan"
