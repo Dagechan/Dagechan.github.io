@@ -38,7 +38,7 @@ $ sudo apt install neovim
 {{< figure src="/images/ubuntu-nvim.png" title="apt installで得たNeovim（画像大きくてすみません）" class="center" >}}
 
 **<p>「NVIM v0.6.1」</p>**
-古いです．今回私はマジのUbuntuにNeovimを導入していますが，この記事を書く前にWSL2で後に紹介するdein.vimをscriptでインストールした場合，Neovimのバージョンが0.9.0以上でないと使えないとかいうエラーが出ました．どうやらapt installではダメみたいですね．．．そこでsnapを使って以下のようにインストールしたら，ちゃんとv0.9.0をインストール出来ていました．
+古いです．今回私はマジのUbuntuにNeovimを導入していますが，この記事を書く前にWSL2で後に紹介するdein.vimをコマンドラインでインストールした場合，Neovimのバージョンが0.9.0以上でないと使えないとかいうエラーが出ました．どうやらapt installではダメみたいですね．．．そこでsnapを使って以下のようにインストールしたら，ちゃんとv0.9.0をインストール出来ていました．
 
 ```bash
 $ sudo snap install nvim --classic --stable

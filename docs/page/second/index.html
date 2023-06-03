@@ -16,7 +16,7 @@
     
   },
   "name":"Dagechanの部屋",
-  "description":"こんにちは．Dagechanです．今回はUbuntuにNeovimを導入しようと思います．\n\u0026mdash;\u0026mdash;\u0026mdash;\u0026mdash;\u0026ndash;ここからneovimの導入には関係ない前書き\u0026mdash;\u0026mdash;\u0026mdash;\u0026mdash;\u0026mdash;-\n私が所属している大学では，演習の際に大学側が用意した環境を取り込むわけですが，そこでの既定のテキストエディタがかなり質素なものでした．\n私は「vscode使おう」と逆張りしたわけですが，やはり便利なものでとても使いやすい高機能なテキストエディタです．今でもたくさんお世話になっているわけですが，最近は大学の講義でもあまりその質素なエディタを推奨される機会が減り，vscodeを使った演習が多くなりました．つまりvscodeを使う学生が大多数になったわけです．そうなるとvscodeにも飽きてしまい，他に何か良いエディタがないものかと考えました．\nそこで見つけたのがNeovimです．というのもこれを選んだ理由としては，某Youtuberの方がこれを使って開発しておられるのを見て，かっこいいと思ったからです（小並感）．\n\u0026mdash;\u0026mdash;\u0026mdash;\u0026mdash;\u0026mdash;\u0026mdash;\u0026mdash;\u0026mdash;\u0026mdash;\u0026ndash;ここまで\u0026mdash;\u0026mdash;\u0026mdash;\u0026mdash;\u0026mdash;\u0026mdash;\u0026mdash;\u0026mdash;\u0026mdash;\u0026mdash;\nとりあえずUbuntuでNeovimを導入しようと思って以下のようにインストールしたわけです．\n$ sudo apt install neovim  apt installで得たNeovim（画像大きくてすみません）   「NVIM v0.6.1」 古いです．今回私はマジのUbuntuにNeovimを導入していますが，この記事を書く前にWSL2で後に紹介するdein.vimをscriptでインストールした場合，Neovimのバージョンが0.9.0以上でないと使えないとかいうエラーが出ました．どうやらapt installではダメみたいですね．．．そこでsnapを使って以下のようにインストールしたら，ちゃんとv0.9.0をインストール出来ていました．\n$ sudo snap install nvim --classic --stable classicオプションは，classic confinementを意味しており，これがないとNeovimがsnapでインストール出来ませんでした（詳しいことは今のところまだ理解していない）．stableオプションは安定版をインストールするためのオプションです．\n snap installで得たneovim   ちゃんとV0.9.0になっています．やったぜ．\n拙い文章で知識もまだまだですが，これからもつらつらと書いていこうと思います．",
+  "description":"こんにちは．Dagechanです．今回はUbuntuにNeovimを導入しようと思います．\n\u0026mdash;\u0026mdash;\u0026mdash;\u0026mdash;\u0026ndash;ここからneovimの導入には関係ない前書き\u0026mdash;\u0026mdash;\u0026mdash;\u0026mdash;\u0026mdash;-\n私が所属している大学では，演習の際に大学側が用意した環境を取り込むわけですが，そこでの既定のテキストエディタがかなり質素なものでした．\n私は「vscode使おう」と逆張りしたわけですが，やはり便利なものでとても使いやすい高機能なテキストエディタです．今でもたくさんお世話になっているわけですが，最近は大学の講義でもあまりその質素なエディタを推奨される機会が減り，vscodeを使った演習が多くなりました．つまりvscodeを使う学生が大多数になったわけです．そうなるとvscodeにも飽きてしまい，他に何か良いエディタがないものかと考えました．\nそこで見つけたのがNeovimです．というのもこれを選んだ理由としては，某Youtuberの方がこれを使って開発しておられるのを見て，かっこいいと思ったからです（小並感）．\n\u0026mdash;\u0026mdash;\u0026mdash;\u0026mdash;\u0026mdash;\u0026mdash;\u0026mdash;\u0026mdash;\u0026mdash;\u0026ndash;ここまで\u0026mdash;\u0026mdash;\u0026mdash;\u0026mdash;\u0026mdash;\u0026mdash;\u0026mdash;\u0026mdash;\u0026mdash;\u0026mdash;\nとりあえずUbuntuでNeovimを導入しようと思って以下のようにインストールしたわけです．\n$ sudo apt install neovim  apt installで得たNeovim（画像大きくてすみません）   「NVIM v0.6.1」 古いです．今回私はマジのUbuntuにNeovimを導入していますが，この記事を書く前にWSL2で後に紹介するdein.vimをコマンドラインでインストールした場合，Neovimのバージョンが0.9.0以上でないと使えないとかいうエラーが出ました．どうやらapt installではダメみたいですね．．．そこでsnapを使って以下のようにインストールしたら，ちゃんとv0.9.0をインストール出来ていました．\n$ sudo snap install nvim --classic --stable classicオプションは，classic confinementを意味しており，これがないとNeovimがsnapでインストール出来ませんでした（詳しいことは今のところまだ理解していない）．stableオプションは安定版をインストールするためのオプションです．\n snap installで得たneovim   ちゃんとV0.9.0になっています．やったぜ．\n拙い文章で知識もまだまだですが，これからもつらつらと書いていこうと思います．",
   "url":"https:\/\/Dagechan.github.io\/page\/second\/",
   "keywords":"[tech]"
 }
@@ -35,7 +35,7 @@
 そこで見つけたのがNeovimです．というのもこれを選んだ理由としては，某Youtuberの方がこれを使って開発しておられるのを見て，かっこいいと思ったからです（小並感）．
 &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;ここまで&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;
 とりあえずUbuntuでNeovimを導入しようと思って以下のようにインストールしたわけです．
-$ sudo apt install neovim  apt installで得たNeovim（画像大きくてすみません）   「NVIM v0.6.1」 古いです．今回私はマジのUbuntuにNeovimを導入していますが，この記事を書く前にWSL2で後に紹介するdein.vimをscriptでインストールした場合，Neovimのバージョンが0.9.0以上でないと使えないとかいうエラーが出ました．どうやらapt installではダメみたいですね．．．そこでsnapを使って以下のようにインストールしたら，ちゃんとv0.9.0をインストール出来ていました．
+$ sudo apt install neovim  apt installで得たNeovim（画像大きくてすみません）   「NVIM v0.6.1」 古いです．今回私はマジのUbuntuにNeovimを導入していますが，この記事を書く前にWSL2で後に紹介するdein.vimをコマンドラインでインストールした場合，Neovimのバージョンが0.9.0以上でないと使えないとかいうエラーが出ました．どうやらapt installではダメみたいですね．．．そこでsnapを使って以下のようにインストールしたら，ちゃんとv0.9.0をインストール出来ていました．
 $ sudo snap install nvim --classic --stable classicオプションは，classic confinementを意味しており，これがないとNeovimがsnapでインストール出来ませんでした（詳しいことは今のところまだ理解していない）．stableオプションは安定版をインストールするためのオプションです．
  snap installで得たneovim   ちゃんとV0.9.0になっています．やったぜ．
 拙い文章で知識もまだまだですが，これからもつらつらと書いていこうと思います．">
@@ -48,7 +48,7 @@ $ sudo snap install nvim --classic --stable classicオプションは，classic 
 そこで見つけたのがNeovimです．というのもこれを選んだ理由としては，某Youtuberの方がこれを使って開発しておられるのを見て，かっこいいと思ったからです（小並感）．
 &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;ここまで&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;
 とりあえずUbuntuでNeovimを導入しようと思って以下のようにインストールしたわけです．
-$ sudo apt install neovim  apt installで得たNeovim（画像大きくてすみません）   「NVIM v0.6.1」 古いです．今回私はマジのUbuntuにNeovimを導入していますが，この記事を書く前にWSL2で後に紹介するdein.vimをscriptでインストールした場合，Neovimのバージョンが0.9.0以上でないと使えないとかいうエラーが出ました．どうやらapt installではダメみたいですね．．．そこでsnapを使って以下のようにインストールしたら，ちゃんとv0.9.0をインストール出来ていました．
+$ sudo apt install neovim  apt installで得たNeovim（画像大きくてすみません）   「NVIM v0.6.1」 古いです．今回私はマジのUbuntuにNeovimを導入していますが，この記事を書く前にWSL2で後に紹介するdein.vimをコマンドラインでインストールした場合，Neovimのバージョンが0.9.0以上でないと使えないとかいうエラーが出ました．どうやらapt installではダメみたいですね．．．そこでsnapを使って以下のようにインストールしたら，ちゃんとv0.9.0をインストール出来ていました．
 $ sudo snap install nvim --classic --stable classicオプションは，classic confinementを意味しており，これがないとNeovimがsnapでインストール出来ませんでした（詳しいことは今のところまだ理解していない）．stableオプションは安定版をインストールするためのオプションです．
  snap installで得たneovim   ちゃんとV0.9.0になっています．やったぜ．
 拙い文章で知識もまだまだですが，これからもつらつらと書いていこうと思います．">
@@ -65,7 +65,7 @@ $ sudo snap install nvim --classic --stable classicオプションは，classic 
 そこで見つけたのがNeovimです．というのもこれを選んだ理由としては，某Youtuberの方がこれを使って開発しておられるのを見て，かっこいいと思ったからです（小並感）．
 &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;ここまで&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;
 とりあえずUbuntuでNeovimを導入しようと思って以下のようにインストールしたわけです．
-$ sudo apt install neovim  apt installで得たNeovim（画像大きくてすみません）   「NVIM v0.6.1」 古いです．今回私はマジのUbuntuにNeovimを導入していますが，この記事を書く前にWSL2で後に紹介するdein.vimをscriptでインストールした場合，Neovimのバージョンが0.9.0以上でないと使えないとかいうエラーが出ました．どうやらapt installではダメみたいですね．．．そこでsnapを使って以下のようにインストールしたら，ちゃんとv0.9.0をインストール出来ていました．
+$ sudo apt install neovim  apt installで得たNeovim（画像大きくてすみません）   「NVIM v0.6.1」 古いです．今回私はマジのUbuntuにNeovimを導入していますが，この記事を書く前にWSL2で後に紹介するdein.vimをコマンドラインでインストールした場合，Neovimのバージョンが0.9.0以上でないと使えないとかいうエラーが出ました．どうやらapt installではダメみたいですね．．．そこでsnapを使って以下のようにインストールしたら，ちゃんとv0.9.0をインストール出来ていました．
 $ sudo snap install nvim --classic --stable classicオプションは，classic confinementを意味しており，これがないとNeovimがsnapでインストール出来ませんでした（詳しいことは今のところまだ理解していない）．stableオプションは安定版をインストールするためのオプションです．
  snap installで得たneovim   ちゃんとV0.9.0になっています．やったぜ．
 拙い文章で知識もまだまだですが，これからもつらつらと書いていこうと思います．">
@@ -76,7 +76,7 @@ $ sudo snap install nvim --classic --stable classicオプションは，classic 
 そこで見つけたのがNeovimです．というのもこれを選んだ理由としては，某Youtuberの方がこれを使って開発しておられるのを見て，かっこいいと思ったからです（小並感）．
 &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;ここまで&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;
 とりあえずUbuntuでNeovimを導入しようと思って以下のようにインストールしたわけです．
-$ sudo apt install neovim  apt installで得たNeovim（画像大きくてすみません）   「NVIM v0.6.1」 古いです．今回私はマジのUbuntuにNeovimを導入していますが，この記事を書く前にWSL2で後に紹介するdein.vimをscriptでインストールした場合，Neovimのバージョンが0.9.0以上でないと使えないとかいうエラーが出ました．どうやらapt installではダメみたいですね．．．そこでsnapを使って以下のようにインストールしたら，ちゃんとv0.9.0をインストール出来ていました．
+$ sudo apt install neovim  apt installで得たNeovim（画像大きくてすみません）   「NVIM v0.6.1」 古いです．今回私はマジのUbuntuにNeovimを導入していますが，この記事を書く前にWSL2で後に紹介するdein.vimをコマンドラインでインストールした場合，Neovimのバージョンが0.9.0以上でないと使えないとかいうエラーが出ました．どうやらapt installではダメみたいですね．．．そこでsnapを使って以下のようにインストールしたら，ちゃんとv0.9.0をインストール出来ていました．
 $ sudo snap install nvim --classic --stable classicオプションは，classic confinementを意味しており，これがないとNeovimがsnapでインストール出来ませんでした（詳しいことは今のところまだ理解していない）．stableオプションは安定版をインストールするためのオプションです．
  snap installで得たneovim   ちゃんとV0.9.0になっています．やったぜ．
 拙い文章で知識もまだまだですが，これからもつらつらと書いていこうと思います．">
@@ -300,7 +300,7 @@ $ sudo snap install nvim --classic --stable classicオプションは，classic 
 </figure>
 
 <p><strong><!-- raw HTML omitted -->「NVIM v0.6.1」<!-- raw HTML omitted --></strong>
-古いです．今回私はマジのUbuntuにNeovimを導入していますが，この記事を書く前にWSL2で後に紹介するdein.vimをscriptでインストールした場合，Neovimのバージョンが0.9.0以上でないと使えないとかいうエラーが出ました．どうやらapt installではダメみたいですね．．．そこでsnapを使って以下のようにインストールしたら，ちゃんとv0.9.0をインストール出来ていました．</p>
+古いです．今回私はマジのUbuntuにNeovimを導入していますが，この記事を書く前にWSL2で後に紹介するdein.vimをコマンドラインでインストールした場合，Neovimのバージョンが0.9.0以上でないと使えないとかいうエラーが出ました．どうやらapt installではダメみたいですね．．．そこでsnapを使って以下のようにインストールしたら，ちゃんとv0.9.0をインストール出来ていました．</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo snap install nvim --classic --stable
 </code></pre></div><p>classicオプションは，classic confinementを意味しており，これがないとNeovimがsnapでインストール出来ませんでした（詳しいことは今のところまだ理解していない）．stableオプションは安定版をインストールするためのオプションです．</p>
 <figure class="center"><img src="/images/ubuntu-nvim2.png"/><figcaption>
