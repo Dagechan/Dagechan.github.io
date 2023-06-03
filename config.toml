@@ -2,14 +2,15 @@ baseURL = 'https://Dagechan.github.io/'
 publishDir = "docs"
 languageCode = 'ja'
 defaultContentLanguage = 'ja'
-title = 'My New Hugo Site'
+title = 'Dagechanの部屋'
 theme = 'tranquilpeak'
 
 [author]
   name = "Dagechan"
-  bio = "OSとかに興味があります。"
+  bio = "低レイヤに興味があります。初心者なりに頑張ります。"
   job = "college sutudent"
   location = "Japan"
+  picture = "images/icon.jpg"
   gravatarEmail = "takebose5@gmail.com"
 
 [params]
@@ -18,7 +19,7 @@ theme = 'tranquilpeak'
   dateFormat = "2006-01-02"
   thumbnailImagePosition = "left"
   autoThumbnailImage = true
-  coverImage = "images/cover.jpg"
+  coverImage = "images/mycover.jpg"
   imageGallery = true
   hierarchicalCategories = true
   syntaxHighlighter = 'highlight.js'

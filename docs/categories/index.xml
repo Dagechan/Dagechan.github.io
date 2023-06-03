@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on My New Hugo Site</title>
-    <link>http://Dagechan.github.io/categories/</link>
+    <link>https://Dagechan.github.io/categories/</link>
     <description>Recent content in Categories on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 16 May 2023 09:58:54 +0900</lastBuildDate><atom:link href="http://Dagechan.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 16 May 2023 09:58:54 +0900</lastBuildDate><atom:link href="https://Dagechan.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>subcategory</title>
-      <link>http://Dagechan.github.io/categories/subcategory/</link>
+      <link>https://Dagechan.github.io/categories/subcategory/</link>
       <pubDate>Tue, 16 May 2023 09:58:54 +0900</pubDate>
       
-      <guid>http://Dagechan.github.io/categories/subcategory/</guid>
+      <guid>https://Dagechan.github.io/categories/subcategory/</guid>
       <description></description>
     </item>
     
     <item>
       <title>日記</title>
-      <link>http://Dagechan.github.io/categories/%E6%97%A5%E8%A8%98/</link>
+      <link>https://Dagechan.github.io/categories/%E6%97%A5%E8%A8%98/</link>
       <pubDate>Tue, 16 May 2023 09:58:54 +0900</pubDate>
       
-      <guid>http://Dagechan.github.io/categories/%E6%97%A5%E8%A8%98/</guid>
+      <guid>https://Dagechan.github.io/categories/%E6%97%A5%E8%A8%98/</guid>
       <description></description>
     </item>
     

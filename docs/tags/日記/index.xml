@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>日記 on My New Hugo Site</title>
-    <link>http://Dagechan.github.io/tags/%E6%97%A5%E8%A8%98/</link>
+    <link>https://Dagechan.github.io/tags/%E6%97%A5%E8%A8%98/</link>
     <description>Recent content in 日記 on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 16 May 2023 09:58:54 +0900</lastBuildDate><atom:link href="http://Dagechan.github.io/tags/%E6%97%A5%E8%A8%98/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 16 May 2023 09:58:54 +0900</lastBuildDate><atom:link href="https://Dagechan.github.io/tags/%E6%97%A5%E8%A8%98/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Test</title>
-      <link>http://Dagechan.github.io/page/test/</link>
+      <link>https://Dagechan.github.io/page/test/</link>
       <pubDate>Tue, 16 May 2023 09:58:54 +0900</pubDate>
       
-      <guid>http://Dagechan.github.io/page/test/</guid>
+      <guid>https://Dagechan.github.io/page/test/</guid>
       <description></description>
     </item>
     
     <item>
       <title>初投稿</title>
-      <link>http://Dagechan.github.io/page/init/</link>
+      <link>https://Dagechan.github.io/page/init/</link>
       <pubDate>Sun, 14 May 2023 18:58:04 +0900</pubDate>
       
-      <guid>http://Dagechan.github.io/page/init/</guid>
+      <guid>https://Dagechan.github.io/page/init/</guid>
       <description>初投稿です！！ こんにちは！！</description>
     </item>
     
