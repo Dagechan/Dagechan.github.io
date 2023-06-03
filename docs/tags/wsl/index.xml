@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Dagechanの部屋</title>
-    <link>https://Dagechan.github.io/</link>
-    <description>Recent content on Dagechanの部屋</description>
+    <title>WSL on Dagechanの部屋</title>
+    <link>https://Dagechan.github.io/tags/wsl/</link>
+    <description>Recent content in WSL on Dagechanの部屋</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 03 Jun 2023 16:52:55 +0900</lastBuildDate><atom:link href="https://Dagechan.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 03 Jun 2023 16:52:55 +0900</lastBuildDate><atom:link href="https://Dagechan.github.io/tags/wsl/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>apt installのNeovimは古い！</title>
       <link>https://Dagechan.github.io/page/second/</link>
@@ -24,15 +24,6 @@ $ sudo apt install neovim  apt installで得たNeovim（画像大きくてすみ
 $ sudo snap install nvim --classic --stable classicオプションは，classic confinementを意味しており，これがないとNeovimがsnapでインストール出来ませんでした（詳しいことは今のところまだ理解していない）．stableオプションは安定版をインストールするためのオプションです．
  snap installで得たneovim   ちゃんとV0.9.0になっています．やったぜ．
 拙い文章で知識もまだまだですが，これからもつらつらと書いていこうと思います．</description>
-    </item>
-    
-    <item>
-      <title>初投稿</title>
-      <link>https://Dagechan.github.io/page/init/</link>
-      <pubDate>Sun, 14 May 2023 18:58:04 +0900</pubDate>
-      
-      <guid>https://Dagechan.github.io/page/init/</guid>
-      <description>こんにちは．初投稿です．自分がアウトプットできる場を作ろうと思って当ブログ作成に至ったわけですが，実装方法を大きく変えたり何やらで時間がかかってしまいました．申し遅れました，現在大学で情報系科を専攻しているDagechan（だげちゃん）と申します．低レイヤに興味があり，マイペースながら少しずつ勉強中です．これから自分がやってきたことや，ただ単に書きたいことを書いていきます．ただ単に私のアウトプットになるだけでなく，私と同じような初心者の方のお力になれると嬉しいです．更に，何かお気づきの点があれば有識者の方からのご指摘があれば幸いです．よろしくお願いいたします．なお，時間が立つにつれこのブログをもうすこし装飾できればなと考えておりますので，デザインとかが微妙に変わることがあるかも．．．</description>
     </item>
     
   </channel>

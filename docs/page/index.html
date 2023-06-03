@@ -15,7 +15,7 @@
     "image": "https://www.gravatar.com/avatar/f4566411a9b6cda64ac72b2eed75ef85"
     
   },
-  "name":"My New Hugo Site",
+  "name":"Dagechanの部屋",
   "description":"",
   "url":"https:\/\/Dagechan.github.io\/page\/",
   "keywords":"[]"
@@ -37,7 +37,7 @@
 <meta name="twitter:title" content="Pages">
 <meta property="og:url" content="https://Dagechan.github.io/page/">
 <meta property="twitter:url" content="https://Dagechan.github.io/page/">
-<meta property="og:site_name" content="My New Hugo Site">
+<meta property="og:site_name" content="Dagechanの部屋">
 <meta property="og:description" content="">
 <meta name="twitter:description" content="">
 <meta property="og:locale" content="ja">
@@ -91,7 +91,7 @@
       <header id="header" data-behavior="2">
   <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
   <div class="header-title">
-    <a class="header-title-link" href="/" aria-label="ホームページへ">My New Hugo Site</a>
+    <a class="header-title-link" href="/" aria-label="ホームページへ">Dagechanの部屋</a>
   </div>
   
 </header>
@@ -105,7 +105,7 @@
         </a>
         <h4 class="sidebar-profile-name">Dagechan</h4>
         
-          <h5 class="sidebar-profile-bio">OSとかに興味があります。</h5>
+          <h5 class="sidebar-profile-bio">低レイヤに興味があります。初心者なりに頑張ります。</h5>
         
       </div>
     
@@ -202,21 +202,21 @@
     <div class="postShorten-header">
       <h1 class="postShorten-title">
       
-        <a class="link-unstyled" href="https://Dagechan.github.io/page/test/" aria-label="投稿を開く: Test">
+        <a class="link-unstyled" href="https://Dagechan.github.io/page/second/" aria-label="投稿を開く: apt installのNeovimは古い！">
       
-          Test
+          apt installのNeovimは古い！
         </a>
       </h1>
       
   <div class="postShorten-meta post-meta">
     
-      <time datetime="2023-05-16T09:58:54&#43;09:00">
+      <time datetime="2023-06-03T16:52:55&#43;09:00">
         
   
   
   
   
-    2023-05-16
+    2023-06-03
   
 
       </time>
@@ -226,9 +226,9 @@
   
     <span>カテゴリー</span>
     
-      <a class="category-link" href="/categories/%e6%97%a5%e8%a8%98">日記</a>, 
+      <a class="category-link" href="/categories/tech">Tech</a>, 
     
-      <a class="category-link" href="/categories/subcategory">subcategory</a>
+      <a class="category-link" href="/categories/linux">Linux</a>
     
   
 
@@ -237,11 +237,21 @@
     </div>
     <div class="postShorten-excerpt">
       
-        
+        こんにちは．Dagechanです．今回はUbuntuにNeovimを導入しようと思います．
+&mdash;&mdash;&mdash;&mdash;&ndash;ここからneovimの導入には関係ない前書き&mdash;&mdash;&mdash;&mdash;&mdash;-
+私が所属している大学では，演習の際に大学側が用意した環境を取り込むわけですが，そこでの既定のテキストエディタがかなり質素なものでした．
+私は「vscode使おう」と逆張りしたわけですが，やはり便利なものでとても使いやすい高機能なテキストエディタです．今でもたくさんお世話になっているわけですが，最近は大学の講義でもあまりその質素なエディタを推奨される機会が減り，vscodeを使った演習が多くなりました．つまりvscodeを使う学生が大多数になったわけです．そうなるとvscodeにも飽きてしまい，他に何か良いエディタがないものかと考えました．
+そこで見つけたのがNeovimです．というのもこれを選んだ理由としては，某Youtuberの方がこれを使って開発しておられるのを見て，かっこいいと思ったからです（小並感）．
+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;ここまで&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;
+とりあえずUbuntuでNeovimを導入しようと思って以下のようにインストールしたわけです．
+$ sudo apt install neovim  apt installで得たNeovim（画像大きくてすみません）   「NVIM v0.6.1」 古いです．今回私はマジのUbuntuにNeovimを導入していますが，この記事を書く前にWSL2で後に紹介するdein.vimをscriptでインストールした場合，Neovimのバージョンが0.9.0以上でないと使えないとかいうエラーが出ました．どうやらapt installではダメみたいですね．．．そこでsnapを使って以下のようにインストールしたら，ちゃんとv0.9.0をインストール出来ていました．
+$ sudo snap install nvim --classic --stable classicオプションは，classic confinementを意味しており，これがないとNeovimがsnapでインストール出来ませんでした（詳しいことは今のところまだ理解していない）．stableオプションは安定版をインストールするためのオプションです．
+ snap installで得たneovim   ちゃんとV0.9.0になっています．やったぜ．
+拙い文章で知識もまだまだですが，これからもつらつらと書いていこうと思います．
       
       <p>
         
-          <a href="https://Dagechan.github.io/page/test/" class="postShorten-excerpt_link link" aria-label="投稿を開く: Test">続きを読む</a>
+          <a href="https://Dagechan.github.io/page/second/" class="postShorten-excerpt_link link" aria-label="投稿を開く: apt installのNeovimは古い！">続きを読む</a>
         
         
       </p>
@@ -304,7 +314,7 @@
     </div>
     <div class="postShorten-excerpt">
       
-        初投稿です！！ こんにちは！！
+        こんにちは．初投稿です．自分がアウトプットできる場を作ろうと思って当ブログ作成に至ったわけですが，実装方法を大きく変えたり何やらで時間がかかってしまいました．申し遅れました，現在大学で情報系科を専攻しているDagechan（だげちゃん）と申します．低レイヤに興味があり，マイペースながら少しずつ勉強中です．これから自分がやってきたことや，ただ単に書きたいことを書いていきます．ただ単に私のアウトプットになるだけでなく，私と同じような初心者の方のお力になれると嬉しいです．更に，何かお気づきの点があれば有識者の方からのご指摘があれば幸いです．よろしくお願いいたします．なお，時間が立つにつれこのブログをもうすこし装飾できればなと考えておりますので，デザインとかが微妙に変わることがあるかも．．．
       
       <p>
         
@@ -340,7 +350,7 @@
     
     <h4 id="about-card-name">Dagechan</h4>
     
-      <div id="about-card-bio">OSとかに興味があります。</div>
+      <div id="about-card-bio">低レイヤに興味があります。初心者なりに頑張ります。</div>
     
     
       <div id="about-card-job">

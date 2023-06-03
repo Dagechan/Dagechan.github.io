@@ -1,28 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>日記 on My New Hugo Site</title>
+    <title>日記 on Dagechanの部屋</title>
     <link>https://Dagechan.github.io/tags/%E6%97%A5%E8%A8%98/</link>
-    <description>Recent content in 日記 on My New Hugo Site</description>
+    <description>Recent content in 日記 on Dagechanの部屋</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 16 May 2023 09:58:54 +0900</lastBuildDate><atom:link href="https://Dagechan.github.io/tags/%E6%97%A5%E8%A8%98/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Test</title>
-      <link>https://Dagechan.github.io/page/test/</link>
-      <pubDate>Tue, 16 May 2023 09:58:54 +0900</pubDate>
-      
-      <guid>https://Dagechan.github.io/page/test/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Sun, 14 May 2023 18:58:04 +0900</lastBuildDate><atom:link href="https://Dagechan.github.io/tags/%E6%97%A5%E8%A8%98/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>初投稿</title>
       <link>https://Dagechan.github.io/page/init/</link>
       <pubDate>Sun, 14 May 2023 18:58:04 +0900</pubDate>
       
       <guid>https://Dagechan.github.io/page/init/</guid>
-      <description>初投稿です！！ こんにちは！！</description>
+      <description>こんにちは．初投稿です．自分がアウトプットできる場を作ろうと思って当ブログ作成に至ったわけですが，実装方法を大きく変えたり何やらで時間がかかってしまいました．申し遅れました，現在大学で情報系科を専攻しているDagechan（だげちゃん）と申します．低レイヤに興味があり，マイペースながら少しずつ勉強中です．これから自分がやってきたことや，ただ単に書きたいことを書いていきます．ただ単に私のアウトプットになるだけでなく，私と同じような初心者の方のお力になれると嬉しいです．更に，何かお気づきの点があれば有識者の方からのご指摘があれば幸いです．よろしくお願いいたします．なお，時間が立つにつれこのブログをもうすこし装飾できればなと考えておりますので，デザインとかが微妙に変わることがあるかも．．．</description>
     </item>
     
   </channel>

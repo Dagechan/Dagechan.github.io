@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    
+    <script type="application/ld+json">
+
+{  
+  "@context":"http://schema.org",
+  "@type":"Website",
+  "@id":"https:\/\/Dagechan.github.io\/",
+  "author": {
+    "@type": "Person",
+    "name": "Dagechan",
+    
+    "image": "https://www.gravatar.com/avatar/f4566411a9b6cda64ac72b2eed75ef85"
+    
+  },
+  "name":"Dagechanの部屋",
+  "description":"こんにちは．Dagechanです．今回はUbuntuにNeovimを導入しようと思います．\n\u0026mdash;\u0026mdash;\u0026mdash;\u0026mdash;\u0026ndash;ここからneovimの導入には関係ない前書き\u0026mdash;\u0026mdash;\u0026mdash;\u0026mdash;\u0026mdash;-\n私が所属している大学では，演習の際に大学側が用意した環境を取り込むわけですが，そこでの既定のテキストエディタがかなり質素なものでした．\n私は「vscode使おう」と逆張りしたわけですが，やはり便利なものでとても使いやすい高機能なテキストエディタです．今でもたくさんお世話になっているわけですが，最近は大学の講義でもあまりその質素なエディタを推奨される機会が減り，vscodeを使った演習が多くなりました．つまりvscodeを使う学生が大多数になったわけです．そうなるとvscodeにも飽きてしまい，他に何か良いエディタがないものかと考えました．\nそこで見つけたのがNeovimです．というのもこれを選んだ理由としては，某Youtuberの方がこれを使って開発しておられるのを見て，かっこいいと思ったからです（小並感）．\n\u0026mdash;\u0026mdash;\u0026mdash;\u0026mdash;\u0026mdash;\u0026mdash;\u0026mdash;\u0026mdash;\u0026mdash;\u0026ndash;ここまで\u0026mdash;\u0026mdash;\u0026mdash;\u0026mdash;\u0026mdash;\u0026mdash;\u0026mdash;\u0026mdash;\u0026mdash;\u0026mdash;\nとりあえずUbuntuでNeovimを導入しようと思って以下のようにインストールしたわけです．\n$ sudo apt install neovim  apt installで得たNeovim（画像大きくてすみません）   「NVIM v0.6.1」 古いです．今回私はマジのUbuntuにNeovimを導入していますが，この記事を書く前にWSL2で後に紹介するdein.vimをscriptでインストールした場合，Neovimのバージョンが0.9.0以上でないと使えないとかいうエラーが出ました．どうやらapt installではダメみたいですね．．．そこでsnapを使って以下のようにインストールしたら，ちゃんとv0.9.0をインストール出来ていました．\n$ sudo snap install nvim --classic --stable classicオプションは，classic confinementを意味しており，これがないとNeovimがsnapでインストール出来ませんでした（詳しいことは今のところまだ理解していない）．stableオプションは安定版をインストールするためのオプションです．\n snap installで得たneovim   ちゃんとV0.9.0になっています．やったぜ．\n拙い文章で知識もまだまだですが，これからもつらつらと書いていこうと思います．",
+  "url":"https:\/\/Dagechan.github.io\/page\/second\/",
+  "keywords":"[tech]"
+}
+
+</script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.92.2 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="author" content="Dagechan">
+<meta name="keywords" content="tech">
+<meta name="description" content="こんにちは．Dagechanです．今回はUbuntuにNeovimを導入しようと思います．
+&mdash;&mdash;&mdash;&mdash;&ndash;ここからneovimの導入には関係ない前書き&mdash;&mdash;&mdash;&mdash;&mdash;-
+私が所属している大学では，演習の際に大学側が用意した環境を取り込むわけですが，そこでの既定のテキストエディタがかなり質素なものでした．
+私は「vscode使おう」と逆張りしたわけですが，やはり便利なものでとても使いやすい高機能なテキストエディタです．今でもたくさんお世話になっているわけですが，最近は大学の講義でもあまりその質素なエディタを推奨される機会が減り，vscodeを使った演習が多くなりました．つまりvscodeを使う学生が大多数になったわけです．そうなるとvscodeにも飽きてしまい，他に何か良いエディタがないものかと考えました．
+そこで見つけたのがNeovimです．というのもこれを選んだ理由としては，某Youtuberの方がこれを使って開発しておられるのを見て，かっこいいと思ったからです（小並感）．
+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;ここまで&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;
+とりあえずUbuntuでNeovimを導入しようと思って以下のようにインストールしたわけです．
+$ sudo apt install neovim  apt installで得たNeovim（画像大きくてすみません）   「NVIM v0.6.1」 古いです．今回私はマジのUbuntuにNeovimを導入していますが，この記事を書く前にWSL2で後に紹介するdein.vimをscriptでインストールした場合，Neovimのバージョンが0.9.0以上でないと使えないとかいうエラーが出ました．どうやらapt installではダメみたいですね．．．そこでsnapを使って以下のようにインストールしたら，ちゃんとv0.9.0をインストール出来ていました．
+$ sudo snap install nvim --classic --stable classicオプションは，classic confinementを意味しており，これがないとNeovimがsnapでインストール出来ませんでした（詳しいことは今のところまだ理解していない）．stableオプションは安定版をインストールするためのオプションです．
+ snap installで得たneovim   ちゃんとV0.9.0になっています．やったぜ．
+拙い文章で知識もまだまだですが，これからもつらつらと書いていこうと思います．">
+
+
+<meta property="og:description" content="こんにちは．Dagechanです．今回はUbuntuにNeovimを導入しようと思います．
+&mdash;&mdash;&mdash;&mdash;&ndash;ここからneovimの導入には関係ない前書き&mdash;&mdash;&mdash;&mdash;&mdash;-
+私が所属している大学では，演習の際に大学側が用意した環境を取り込むわけですが，そこでの既定のテキストエディタがかなり質素なものでした．
+私は「vscode使おう」と逆張りしたわけですが，やはり便利なものでとても使いやすい高機能なテキストエディタです．今でもたくさんお世話になっているわけですが，最近は大学の講義でもあまりその質素なエディタを推奨される機会が減り，vscodeを使った演習が多くなりました．つまりvscodeを使う学生が大多数になったわけです．そうなるとvscodeにも飽きてしまい，他に何か良いエディタがないものかと考えました．
+そこで見つけたのがNeovimです．というのもこれを選んだ理由としては，某Youtuberの方がこれを使って開発しておられるのを見て，かっこいいと思ったからです（小並感）．
+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;ここまで&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;
+とりあえずUbuntuでNeovimを導入しようと思って以下のようにインストールしたわけです．
+$ sudo apt install neovim  apt installで得たNeovim（画像大きくてすみません）   「NVIM v0.6.1」 古いです．今回私はマジのUbuntuにNeovimを導入していますが，この記事を書く前にWSL2で後に紹介するdein.vimをscriptでインストールした場合，Neovimのバージョンが0.9.0以上でないと使えないとかいうエラーが出ました．どうやらapt installではダメみたいですね．．．そこでsnapを使って以下のようにインストールしたら，ちゃんとv0.9.0をインストール出来ていました．
+$ sudo snap install nvim --classic --stable classicオプションは，classic confinementを意味しており，これがないとNeovimがsnapでインストール出来ませんでした（詳しいことは今のところまだ理解していない）．stableオプションは安定版をインストールするためのオプションです．
+ snap installで得たneovim   ちゃんとV0.9.0になっています．やったぜ．
+拙い文章で知識もまだまだですが，これからもつらつらと書いていこうと思います．">
+<meta property="og:type" content="article">
+<meta property="og:title" content="apt installのNeovimは古い！">
+<meta name="twitter:title" content="apt installのNeovimは古い！">
+<meta property="og:url" content="https://Dagechan.github.io/page/second/">
+<meta property="twitter:url" content="https://Dagechan.github.io/page/second/">
+<meta property="og:site_name" content="Dagechanの部屋">
+<meta property="og:description" content="こんにちは．Dagechanです．今回はUbuntuにNeovimを導入しようと思います．
+&mdash;&mdash;&mdash;&mdash;&ndash;ここからneovimの導入には関係ない前書き&mdash;&mdash;&mdash;&mdash;&mdash;-
+私が所属している大学では，演習の際に大学側が用意した環境を取り込むわけですが，そこでの既定のテキストエディタがかなり質素なものでした．
+私は「vscode使おう」と逆張りしたわけですが，やはり便利なものでとても使いやすい高機能なテキストエディタです．今でもたくさんお世話になっているわけですが，最近は大学の講義でもあまりその質素なエディタを推奨される機会が減り，vscodeを使った演習が多くなりました．つまりvscodeを使う学生が大多数になったわけです．そうなるとvscodeにも飽きてしまい，他に何か良いエディタがないものかと考えました．
+そこで見つけたのがNeovimです．というのもこれを選んだ理由としては，某Youtuberの方がこれを使って開発しておられるのを見て，かっこいいと思ったからです（小並感）．
+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;ここまで&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;
+とりあえずUbuntuでNeovimを導入しようと思って以下のようにインストールしたわけです．
+$ sudo apt install neovim  apt installで得たNeovim（画像大きくてすみません）   「NVIM v0.6.1」 古いです．今回私はマジのUbuntuにNeovimを導入していますが，この記事を書く前にWSL2で後に紹介するdein.vimをscriptでインストールした場合，Neovimのバージョンが0.9.0以上でないと使えないとかいうエラーが出ました．どうやらapt installではダメみたいですね．．．そこでsnapを使って以下のようにインストールしたら，ちゃんとv0.9.0をインストール出来ていました．
+$ sudo snap install nvim --classic --stable classicオプションは，classic confinementを意味しており，これがないとNeovimがsnapでインストール出来ませんでした（詳しいことは今のところまだ理解していない）．stableオプションは安定版をインストールするためのオプションです．
+ snap installで得たneovim   ちゃんとV0.9.0になっています．やったぜ．
+拙い文章で知識もまだまだですが，これからもつらつらと書いていこうと思います．">
+<meta name="twitter:description" content="こんにちは．Dagechanです．今回はUbuntuにNeovimを導入しようと思います．
+&mdash;&mdash;&mdash;&mdash;&ndash;ここからneovimの導入には関係ない前書き&mdash;&mdash;&mdash;&mdash;&mdash;-
+私が所属している大学では，演習の際に大学側が用意した環境を取り込むわけですが，そこでの既定のテキストエディタがかなり質素なものでした．
+私は「vscode使おう」と逆張りしたわけですが，やはり便利なものでとても使いやすい高機能なテキストエディタです．今でもたくさんお世話になっているわけですが，最近は大学の講義でもあまりその質素なエディタを推奨される機会が減り，vscodeを使った演習が多くなりました．つまりvscodeを使う学生が大多数になったわけです．そうなるとvscodeにも飽きてしまい，他に何か良いエディタがないものかと考えました．
+そこで見つけたのがNeovimです．というのもこれを選んだ理由としては，某Youtuberの方がこれを使って開発しておられるのを見て，かっこいいと思ったからです（小並感）．
+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;ここまで&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;
+とりあえずUbuntuでNeovimを導入しようと思って以下のようにインストールしたわけです．
+$ sudo apt install neovim  apt installで得たNeovim（画像大きくてすみません）   「NVIM v0.6.1」 古いです．今回私はマジのUbuntuにNeovimを導入していますが，この記事を書く前にWSL2で後に紹介するdein.vimをscriptでインストールした場合，Neovimのバージョンが0.9.0以上でないと使えないとかいうエラーが出ました．どうやらapt installではダメみたいですね．．．そこでsnapを使って以下のようにインストールしたら，ちゃんとv0.9.0をインストール出来ていました．
+$ sudo snap install nvim --classic --stable classicオプションは，classic confinementを意味しており，これがないとNeovimがsnapでインストール出来ませんでした（詳しいことは今のところまだ理解していない）．stableオプションは安定版をインストールするためのオプションです．
+ snap installで得たneovim   ちゃんとV0.9.0になっています．やったぜ．
+拙い文章で知識もまだまだですが，これからもつらつらと書いていこうと思います．">
+<meta property="og:locale" content="ja">
+
+  
+    <meta property="article:published_time" content="2023-06-03T16:52:55">
+  
+  
+    <meta property="article:modified_time" content="2023-06-03T16:52:55">
+  
+  
+  
+    
+      <meta property="article:section" content="Tech">
+    
+      <meta property="article:section" content="Linux">
+    
+  
+  
+    
+      <meta property="article:tag" content="Neovim">
+    
+      <meta property="article:tag" content="Linux">
+    
+      <meta property="article:tag" content="Ubuntu">
+    
+      <meta property="article:tag" content="Vim">
+    
+      <meta property="article:tag" content="WSL">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://www.gravatar.com/avatar/f4566411a9b6cda64ac72b2eed75ef85?s=640">
+  <meta property="twitter:image" content="https://www.gravatar.com/avatar/f4566411a9b6cda64ac72b2eed75ef85?s=640">
+
+
+
+
+
+
+    <title>apt installのNeovimは古い！</title>
+
+    <link rel="icon" href="/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://Dagechan.github.io/page/second/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    
+    <link rel="stylesheet" href="https://Dagechan.github.io/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="2">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="/" aria-label="ホームページへ">Dagechanの部屋</a>
+  </div>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="2">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="/#about" aria-label="著者についてもっと読む">
+          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/f4566411a9b6cda64ac72b2eed75ef85?s=110" alt="プロフィール画像" />
+        </a>
+        <h4 class="sidebar-profile-name">Dagechan</h4>
+        
+          <h5 class="sidebar-profile-bio">低レイヤに興味があります。初心者なりに頑張ります。</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/" title="Home">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">ホーム</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/categories" title="Categories">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">カテゴリー</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/tags" title="Tags">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">タグ</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/#about" title="About">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">プロフィール</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/Dagechan" target="_blank" rel="noopener" title="GitHub">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="2"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" id="top">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title">
+      apt installのNeovimは古い！
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2023-06-03T16:52:55&#43;09:00">
+        
+  
+  
+  
+  
+    2023-06-03
+  
+
+      </time>
+    
+    
+  
+  
+    <span>カテゴリー</span>
+    
+      <a class="category-link" href="/categories/tech">Tech</a>, 
+    
+      <a class="category-link" href="/categories/linux">Linux</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown">
+            <div class="main-content-wrap">
+              <p>　こんにちは．Dagechanです．今回はUbuntuにNeovimを導入しようと思います．</p>
+<p>&mdash;&mdash;&mdash;&mdash;&ndash;<strong>ここからneovimの導入には関係ない前書き</strong>&mdash;&mdash;&mdash;&mdash;&mdash;-</p>
+<p>私が所属している大学では，演習の際に大学側が用意した環境を取り込むわけですが，そこでの既定のテキストエディタがかなり質素なものでした．</p>
+<p>私は「vscode使おう」と逆張りしたわけですが，やはり便利なものでとても使いやすい高機能なテキストエディタです．今でもたくさんお世話になっているわけですが，最近は大学の講義でもあまりその質素なエディタを推奨される機会が減り，vscodeを使った演習が多くなりました．つまりvscodeを使う学生が大多数になったわけです．そうなるとvscodeにも飽きてしまい，他に何か良いエディタがないものかと考えました．</p>
+<p>そこで見つけたのがNeovimです．というのもこれを選んだ理由としては，某Youtuberの方がこれを使って開発しておられるのを見て，かっこいいと思ったからです（小並感）．</p>
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;<strong>ここまで</strong>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</p>
+<p>とりあえずUbuntuでNeovimを導入しようと思って以下のようにインストールしたわけです．</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt install neovim
+</code></pre></div><figure class="center"><img src="/images/ubuntu-nvim.png"/><figcaption>
+            <h4>apt installで得たNeovim（画像大きくてすみません）</h4>
+        </figcaption>
+</figure>
+
+<p><strong><!-- raw HTML omitted -->「NVIM v0.6.1」<!-- raw HTML omitted --></strong>
+古いです．今回私はマジのUbuntuにNeovimを導入していますが，この記事を書く前にWSL2で後に紹介するdein.vimをscriptでインストールした場合，Neovimのバージョンが0.9.0以上でないと使えないとかいうエラーが出ました．どうやらapt installではダメみたいですね．．．そこでsnapを使って以下のようにインストールしたら，ちゃんとv0.9.0をインストール出来ていました．</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo snap install nvim --classic --stable
+</code></pre></div><p>classicオプションは，classic confinementを意味しており，これがないとNeovimがsnapでインストール出来ませんでした（詳しいことは今のところまだ理解していない）．stableオプションは安定版をインストールするためのオプションです．</p>
+<figure class="center"><img src="/images/ubuntu-nvim2.png"/><figcaption>
+            <h4>snap installで得たneovim</h4>
+        </figcaption>
+</figure>
+
+<p>ちゃんとV0.9.0になっています．やったぜ．</p>
+<!-- raw HTML omitted -->
+<p>拙い文章で知識もまだまだですが，これからもつらつらと書いていこうと思います．</p>
+
+              
+
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">タグ</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="/tags/neovim/">Neovim</a>
+
+  <a class="tag tag--primary tag--small" href="/tags/linux/">Linux</a>
+
+  <a class="tag tag--primary tag--small" href="/tags/ubuntu/">Ubuntu</a>
+
+  <a class="tag tag--primary tag--small" href="/tags/vim/">Vim</a>
+
+  <a class="tag tag--primary tag--small" href="/tags/wsl/">WSL</a>
+
+                  </div>
+                
+              
+            
+            
+
+            
+  
+
+
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2023 Dagechan. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="2">
+        
+
+      </div>
+      
+
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-times"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://www.gravatar.com/avatar/f4566411a9b6cda64ac72b2eed75ef85?s=110" alt="プロフィール画像" />
+    
+    <h4 id="about-card-name">Dagechan</h4>
+    
+      <div id="about-card-bio">低レイヤに興味があります。初心者なりに頑張ります。</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        college sutudent
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker-alt"></i>
+        <br/>
+        Japan
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://Dagechan.github.io/images/mycover.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="https://Dagechan.github.io/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
+
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+
+
+    
+  </body>
+</html>
+
