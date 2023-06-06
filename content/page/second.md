@@ -19,6 +19,7 @@ showActions:    false
 ---
 
 　こんにちは．Dagechanです．今回はUbuntuにNeovimを導入しようと思います．
+<!--more-->
 
 --------------**ここからneovimの導入には関係ない前書き**----------------
 
